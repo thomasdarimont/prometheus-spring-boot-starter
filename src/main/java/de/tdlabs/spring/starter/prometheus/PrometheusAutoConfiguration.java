@@ -28,7 +28,8 @@ class PrometheusAutoConfiguration {
     }
 
     @Bean
-    ServletRegistrationBean servletRegistrationBean(@Value("${prometheus.metrics.path:/prometheus}") String metricsPath) {
+    @ConditionalOnMissingBean(name = "prometheusMetricsServletRegistrationBean")
+    ServletRegistrationBean prometheusMetricsServletRegistrationBean(@Value("${prometheus.metrics.path:/prometheus}") String metricsPath) {
         DefaultExports.initialize();
         return new ServletRegistrationBean(new MetricsServlet(), metricsPath);
     }
