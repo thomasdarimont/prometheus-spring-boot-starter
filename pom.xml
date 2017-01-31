@@ -5,7 +5,7 @@
 
     <groupId>de.tdlabs</groupId>
     <artifactId>prometheus-spring-boot-starter</artifactId>
-    <version>0.0.2-SNAPSHOT</version>
+    <version>0.0.3-SNAPSHOT</version>
     <packaging>jar</packaging>
 
     <name>prometheus-spring-boot-starter</name>
@@ -17,6 +17,7 @@
         <java.version>1.8</java.version>
 
         <prometheus.version>0.0.19</prometheus.version>
+        <spring-boot.version>1.4.4.RELEASE</spring-boot.version>
     </properties>
 
     <dependencyManagement>
@@ -25,7 +26,7 @@
                 <!-- Import dependency management from Spring Boot -->
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-dependencies</artifactId>
-                <version>1.4.3.RELEASE</version>
+                <version>${spring-boot.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>

@@ -22,7 +22,7 @@ Just add the following dependency to your spring-boot-project.
 <dependency>
     <groupId>de.tdlabs</groupId>
     <artifactId>prometheus-spring-boot-starter</artifactId>
-    <version>0.0.2-SNAPSHOT</version>
+    <version>0.0.3-SNAPSHOT</version>
 </dependency>
 ```
 
